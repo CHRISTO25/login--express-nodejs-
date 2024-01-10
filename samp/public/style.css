@@ -1,0 +1,143 @@
+body{
+   margin: 0;
+   overflow-x: hidden;
+}
+.al{
+    margin-top: 8%;
+}
+.img1{
+    width: 50%;
+  
+    margin-left: 54%;
+}
+form{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(251, 251, 251);
+   
+   border:2px solid rgb(149, 149, 149);
+   width: 45%;
+   height: 550px;
+   border-radius: 25px;
+}
+.img2{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 25%;
+}
+.fld{
+    margin-left: 15%;
+    margin-top: 5%;
+}
+input[type=email],[type=password]{
+    width: 90% !important;
+    height: 30px;
+}
+.btnn{
+    
+    margin-top: 5%;
+
+}
+.bt{
+    background-color: rgb(0, 221, 255);
+    width: 260px;
+    margin-left: 15%;
+    color: black;
+}
+h3{
+    color: blue;
+}
+h5{
+    color: black;
+}
+.beta{
+    margin-top: 5%;
+    margin-left: 15%;
+}
+hr{
+    color: black;
+}
+.onem{
+    margin-left: 30%;
+}
+.onm{
+    margin-left: 22%;
+}
+span{
+    color: red;
+}
+nav{
+    background-color: black;
+    padding-left: 250px;
+}
+a{
+    color: white;
+    padding-left: 5%;
+}
+.btx{
+    color: red;
+}
+.my{
+    width: 100%;
+}
+.gp1{
+    position: relative;
+    width: 80%;
+    padding-left: 40px;
+}
+/* =============== */
+
+
+
+  #message1 {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+ 
+  }
+
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+ 
+  }
+  
+ 
+#message1 p {
+    
+   
+    padding-left: 90px;
+   
+  }
+  
+  #message p {
+    
+    
+    padding-left: 90px;
+   
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
+  

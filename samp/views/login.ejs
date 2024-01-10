@@ -1,0 +1,175 @@
+<%-include('srt')-%>
+    <div class="al">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <img class="img1" src="/static/images/img1.png" alt="error">
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <form action="" onsubmit="handlesubmit()" method="post" name="form1">
+                    <div class="hd">
+                        <img class="img2" src="/static/images/img2.png" alt="">
+                    </div>
+                    <div class="fld">
+                        <input type="email"  class="form-control" placeholder="Phone number, username or email" name="usmail" id="usrname" required>
+                        <span id="emi"></span>
+                    </div>
+                    <div id="message1">
+                        <p id="letters" class="invalid"><b>Email</b></p>
+                      </div>
+                    <div class="fld">
+                        <input type="password" class="form-control" placeholder="Password" name="pass" id="psw" required>
+                        <span id="nam"></span>
+                    </div>
+                    <div id="message">
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                      </div>
+                    <script>
+
+
+
+
+var user=  document.getElementById("usrname");
+var lette = document.getElementById("letters");
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+
+
+
+user.onblur = function() {
+  document.getElementById("message1").style.display = "none";
+}
+
+user.onfocus = function() {
+  document.getElementById("message1").style.display = "block";
+}
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+
+  
+}
+user.onkeyup = function() {
+    if(user !="")
+   {
+    lette.classList.remove("invalid");
+    lette.classList.add("valid");
+   }
+}
+                    
+                    
+                        // function handlesubmit()
+                        // {
+          
+                        
+                        //   var m=document.getElementById("usrname").value
+                        //   var l= document.getElementById("psw").value
+                          
+
+                        //   if(l=="" && m=="")
+                        //     {
+                          
+                        //   alert("please fill password and email")
+                             
+                        //      document.form1.name.focus();
+                        //     return false;
+                        //    }
+                        
+                        
+                        //    if(l==""){
+                          
+                        //    alert("must have password")
+                        //     //   nam.innerText="must have name";
+                        //       document.form1.name.focus();
+                        //      return false;
+                        //     }
+                        //     if(m==""){
+                          
+                        //   alert("must have mail")
+                        //     //  emi.innerText="must have mail";
+                        //      document.form1.name.focus();
+                        //     return false;
+                        //    }
+                        //     return true;
+                        // }
+                        
+                                           </script>
+                   
+                    <div class="btnn">
+                        <input type="submit" class="bt btn" value="Log in">
+                    </div>
+                    <div class="vara">
+                        <hr>
+                    </div>
+                    <div class="fb beta">
+                        <h3>login with facebook?</h3>
+                        <h5 class="onm" >Forgot password ?</h5>
+                    </div>
+                    <div class="ah beta">
+                        <h4>Don't have an Account ? <a href="">sign in</a></h4>
+                        <h5 class="onem">Get App</h5>
+                    </div>
+                    <div class="gp">
+                        <img class="gp1" src="/static/images/img12.png" alt="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="js/val.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+<%-include('fin')-%>
